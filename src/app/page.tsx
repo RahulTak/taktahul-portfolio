@@ -58,11 +58,12 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center md:justify-end">
-            <div className="w-48 h-48 bg-gradient-to-tr from-orange-400 to-pink-500 rounded-2xl flex items-center justify-center shadow-xl">
-              <div className="text-white text-center px-4">
-                <p className="font-semibold">Rahul<br/>Tak</p>
-                <p className="text-xs opacity-80">iOS Engineer</p>
-              </div>
+            <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="/Rahul-tak-image.jpg" // place your image in /public/rahul-profile.jpg
+                alt="Rahul Tak"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </section>
