@@ -7,6 +7,7 @@ import {
   WebsiteSchema,
   WebPageSchema,
 } from "@/components/seo";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -124,6 +125,7 @@ export default function RootLayout({
         <PersonSchema />
         <WebsiteSchema />
         <WebPageSchema />
+        <GoogleAnalytics />
         {children}
         <Analytics />
       </body>

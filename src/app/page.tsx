@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from 'react';
 import { getExperience } from "@/utils/experience";
 import ProjectSection from "@/components/projects/ProjectSection";
+import ExperienceSection from "@/components/experience/ExperienceSection";
+import SkillsSection from "@/components/skills/SkillsSection";
 
 const DOWNLOAD_RESUME_URL = '/Rahul-Tak-Resume.pdf'; // put resume in public/ or change to external link
 const EMAIL = 'rahultak2008@gmail.com';
@@ -19,6 +21,7 @@ function Tag({ children }: { children: React.ReactNode }) {
 
 export default function Home() {
   const experience = getExperience();
+
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased">
       <div className="max-w-6xl mx-auto px-6 py-12">
@@ -142,6 +145,8 @@ export default function Home() {
         </section>
 
         {/* Experience */}
+        <ExperienceSection />
+        {/*
         <section id="experience" className="mb-12">
           <h3 className="text-2xl font-semibold mb-6">Professional Experience</h3>
 
@@ -201,7 +206,7 @@ export default function Home() {
               <p className="mt-3 text-gray-700 dark:text-gray-300">Started iOS career building apps and suggesting system improvements.</p>
             </article>
           </div>
-        </section>
+        </section> */}
 
         {/* Projects */}
         <ProjectSection />
