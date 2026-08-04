@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from 'react';
+import { getExperience } from "@/utils/experience";
+import ProjectSection from "@/components/projects/ProjectSection";
 
 const DOWNLOAD_RESUME_URL = '/Rahul-Tak-Resume.pdf'; // put resume in public/ or change to external link
 const EMAIL = 'rahultak2008@gmail.com';
@@ -16,14 +18,20 @@ function Tag({ children }: { children: React.ReactNode }) {
 }
 
 export default function Home() {
+  const experience = getExperience();
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased">
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Header */}
         <header className="flex items-center justify-between mb-10">
           <div>
-            <h1 className="text-2xl font-semibold">Rahul Tak</h1>
-            <p className="text-sm text-gray-600 dark:text-gray-300">SDE-2 — iOS Engineer · Bengaluru, India</p>
+            <h1 className="text-2xl font-bold tracking-tight">
+              Rahul Tak
+            </h1>
+
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              Senior iOS Engineer • Team Lead • {experience.short} Years Experience • Bengaluru, India
+            </p>
           </div>
           <nav className="flex items-center space-x-4">
             <a className="text-sm hover:underline" href="#projects">Projects</a>
@@ -38,31 +46,58 @@ export default function Home() {
         {/* Hero */}
         <section className="grid md:grid-cols-3 gap-8 items-center mb-12">
           <div className="md:col-span-2">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Hi, I’m Rahul Tak 👋</h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-              iOS Engineer with 9+ years of experience building high-performance, scalable mobile applications using
-              Swift, SwiftUI and modern architectures. I’ve delivered 50+ apps across eCommerce, Government, Finance and
-              EdTech domains.
+            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+              Building High-Performance iOS Applications
+            </h2>
+
+            <p className="text-xl md:text-2xl text-orange-500 font-semibold mb-4">
+              Senior iOS Engineer • 10+ Years Experience
             </p>
+
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+              Swift • SwiftUI • UIKit • MVVM • VIPER
+            </p>
+
+            <p className="text-lg leading-8 text-gray-700 dark:text-gray-300 mb-6">
+              I build scalable, secure and enterprise-grade iOS applications using
+              Swift, SwiftUI, UIKit and modern architecture.
+
+              <br /><br />
+              Over the past {experience.text}, I've delivered more than 50 production-grade iOS applications across eCommerce, Government, Finance and Retail industries while leading engineering teams and improving application performance.
+            </p>
+
+            <div className="flex flex-wrap gap-3 mb-8">
+              <Tag>{experience.short} Years Experience</Tag>
+              <Tag>50+ iOS Apps Delivered</Tag>
+              <Tag>Swift Specialist</Tag>
+              <Tag>SwiftUI</Tag>
+              <Tag>UIKit</Tag>
+              <Tag>Team Lead</Tag>
+              <Tag>Mobile Architecture</Tag>
+            </div>
 
             <div className="flex items-center space-x-3 mb-6">
               <a href="#projects" className="px-4 py-2 bg-gray-800 text-white rounded-md text-sm">View Projects</a>
               <a href={DOWNLOAD_RESUME_URL} className="px-4 py-2 border rounded-md text-sm">Download Resume</a>
-              <a href={`mailto:${EMAIL}`} className="px-4 py-2 border rounded-md text-sm">Let’s Connect</a>
+              <a href={`mailto:${EMAIL}`} className="px-4 py-2 border rounded-md text-sm">Contact Me</a>
             </div>
 
             <div className="space-y-2">
-              <p className="text-sm text-gray-600 dark:text-gray-300">Location: Bengaluru, India</p>
-              <p className="text-sm text-gray-600 dark:text-gray-300">Open to: Leadership roles, iOS team lead, Senior iOS engineering</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">📍 Bengaluru, India</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">💼 Open to Senior iOS Engineer, Lead iOS Engineer, Staff iOS Engineer and Engineering Manager opportunities.
+              </p>
             </div>
           </div>
 
           <div className="flex justify-center md:justify-end">
-            <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src="/Rahul-tak-image.jpg" // place your image in /public/rahul-profile.jpg
-                alt="Rahul Tak"
-                className="w-full h-full object-cover"
+            <div className="relative w-48 h-48 md:w-60 md:h-60 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/rahul-tak.webp"
+                alt="Rahul Tak - Senior iOS Engineer"
+                fill
+                priority
+                sizes="(max-width: 768px) 192px, 240px"
+                className="object-cover"
               />
             </div>
           </div>
@@ -71,11 +106,11 @@ export default function Home() {
         {/* About & Skills */}
         <section className="grid md:grid-cols-3 gap-8 mb-12">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-semibold mb-3">About Me</h3>
+            <h3 className="text-2xl font-semibold mb-3">About</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              iOS Engineer with 9+ years of experience building high-performance, scalable mobile applications using
-              Swift, SwiftUI and modern architectures. I’ve delivered 50+ apps across eCommerce, Government, Finance and
-              EdTech domains.
+              I'm Rahul Tak, a Senior iOS Engineer with over {experience.text} of experience designing and delivering enterprise-grade mobile applications.
+              Throughout my career, I've worked on large-scale products in eCommerce, Government, Retail and Finance, helping organizations build reliable, scalable and user-friendly iOS applications.
+              My expertise includes Swift, SwiftUI, UIKit, Objective-C, MVVM, VIPER, Clean Architecture, performance optimization and technical leadership.
             </p>
 
             <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2">
@@ -108,7 +143,7 @@ export default function Home() {
 
         {/* Experience */}
         <section id="experience" className="mb-12">
-          <h3 className="text-2xl font-semibold mb-6">Experience</h3>
+          <h3 className="text-2xl font-semibold mb-6">Professional Experience</h3>
 
           <div className="space-y-6">
             <article className="p-5 border rounded-lg">
@@ -169,8 +204,10 @@ export default function Home() {
         </section>
 
         {/* Projects */}
+        <ProjectSection />
+        {/*
         <section id="projects" className="mb-12">
-          <h3 className="text-2xl font-semibold mb-6">Selected Projects</h3>
+          <h3 className="text-2xl font-semibold mb-6">Professional Projects</h3>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-5 border rounded-lg bg-gray-50 dark:bg-gray-800">
@@ -234,7 +271,7 @@ export default function Home() {
             </div>
 
           </div>
-        </section>
+        </section> */}
 
         {/* Awards & Education */}
         <section className="grid md:grid-cols-2 gap-6 mb-12">
@@ -261,7 +298,7 @@ export default function Home() {
 
         {/* Contact */}
         <section id="contact" className="p-6 border rounded-lg bg-gray-50 dark:bg-gray-800 mb-12">
-          <h3 className="text-2xl font-semibold mb-3">Get in touch</h3>
+          <h3 className="text-2xl font-semibold mb-3">Let's Work Together</h3>
           <p className="text-gray-700 dark:text-gray-300 mb-4">I’m open to new opportunities and collaborations. Reach out for freelance work, full-time roles, or speaking engagements.</p>
 
           <div className="grid md:grid-cols-3 gap-4">
@@ -287,7 +324,7 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="py-6 text-center text-sm text-gray-500">
-          <div>© {new Date().getFullYear()} Rahul Tak — iOS Engineer. Built with ❤️ and Swift.</div>
+          <div>© {new Date().getFullYear()} Rahul Tak. All Rights Reserved. Built with ❤️ and Swift.</div>
         </footer>
       </div>
     </main>
