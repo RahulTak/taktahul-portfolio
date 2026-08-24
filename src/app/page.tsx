@@ -37,10 +37,29 @@ export default function Home() {
             </p>
           </div>
           <nav className="flex items-center space-x-4">
+            {/* Blog Dropdown */}
+            <details className="relative">
+              <summary className="list-none cursor-pointer text-sm hover:underline">
+                Blog ▾
+              </summary>
+              <div className="absolute right-0 mt-2 w-80 rounded-lg border bg-white p-2 shadow-lg dark:border-gray-700 dark:bg-gray-800 z-50">
+                <a
+                  href="/blog/building-scalable-ios-applications"
+                  className="block rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <span className="block font-medium text-gray-900 dark:text-white">
+                    Building Scalable iOS Applications
+                  </span>
+                  <span className="mt-1 block text-xs text-gray-600 dark:text-gray-300">
+                    Architecture decisions that matter in real-world projects
+                  </span>
+                </a>
+              </div>
+            </details>
             <a className="text-sm hover:underline" href="#projects">Projects</a>
             <a className="text-sm hover:underline" href="#experience">Experience</a>
             <a className="text-sm hover:underline" href="#contact">Contact</a>
-            <a className="px-3 py-1.5 bg-orange-500 text-white rounded-md text-sm" href={DOWNLOAD_RESUME_URL} download>
+            <a className="px-3 py-1.5 bg-orange-600 hover:bg-orange-700 text-white rounded-md text-sm" href={DOWNLOAD_RESUME_URL} download>
               Download Resume
             </a>
           </nav>
@@ -80,7 +99,7 @@ export default function Home() {
             </div>
 
             <div className="flex items-center space-x-3 mb-6">
-              <a href="#projects" className="px-4 py-2 bg-gray-800 text-white rounded-md text-sm">View Projects</a>
+              <a href="#projects" className="px-4 py-2 border rounded-md text-sm">View Projects</a>
               <a href={DOWNLOAD_RESUME_URL} className="px-4 py-2 border rounded-md text-sm">Download Resume</a>
               <a href={`mailto:${EMAIL}`} className="px-4 py-2 border rounded-md text-sm">Contact Me</a>
             </div>
@@ -157,7 +176,7 @@ export default function Home() {
                   <h4 className="font-semibold">Accenture India</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Packaged App Development Team Lead — May 2024 - Present</p>
                 </div>
-                <div className="text-sm text-gray-500">Bengaluru, India</div>
+                <div className="text-sm text-gray-600">Bengaluru, India</div>
               </div>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Onboarded into proprietary technologies and team leadership. Focused on optimizing build performance and app stability for enterprise-scale apps, while mentoring team members and driving modern iOS practices.</p>
             </article>
@@ -168,7 +187,7 @@ export default function Home() {
                   <h4 className="font-semibold">Rishabh Software</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Senior Software Engineer — Feb 2021 - May 2024</p>
                 </div>
-                <div className="text-sm text-gray-500">Vadodara, India</div>
+                <div className="text-sm text-gray-600">Vadodara, India</div>
               </div>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Developed iPhone apps using Swift & Objective-C, engaged in client interactions and interview processes, and learned C# for API debugging and server-side issue resolution.</p>
             </article>
@@ -179,7 +198,7 @@ export default function Home() {
                   <h4 className="font-semibold">Ranosys Technologies</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Senior Software Engineer — Sept 2016 - Feb 2021</p>
                 </div>
-                <div className="text-sm text-gray-500">Jaipur, India</div>
+                <div className="text-sm text-gray-600">Jaipur, India</div>
               </div>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Built scalable apps in Swift/Objective-C with auto-layout & integrations. Coordinated across offshore teams, developed chatbots with Kore.ai & DialogFlow, and was promoted to Senior in 2019.</p>
             </article>
@@ -190,7 +209,7 @@ export default function Home() {
                   <h4 className="font-semibold">Avenging Security Pvt. Ltd.</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300">iOS Developer — Apr 2016 - Aug 2016</p>
                 </div>
-                <div className="text-sm text-gray-500">Jaipur, India</div>
+                <div className="text-sm text-gray-600">Jaipur, India</div>
               </div>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Led multiple iOS projects, participated in estimations, and motivated team members to be proactive and self-organized.</p>
             </article>
@@ -201,7 +220,7 @@ export default function Home() {
                   <h4 className="font-semibold">Orion Infosolution</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300">iOS Developer — Jan 2016 - Apr 2016</p>
                 </div>
-                <div className="text-sm text-gray-500">Jaipur, India</div>
+                <div className="text-sm text-gray-600">Jaipur, India</div>
               </div>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Started iOS career building apps and suggesting system improvements.</p>
             </article>
@@ -219,28 +238,28 @@ export default function Home() {
               <h4 className="font-semibold">Heineken BR & MX</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">Global beverage brand apps</p>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Led iOS development, optimized stability and performance, and reduced build times for faster development cycles.</p>
-              <div className="mt-3 text-sm text-gray-500">Technologies: Swift, UIKit, CI/CD</div>
+              <div className="mt-3 text-sm text-gray-600">Technologies: Swift, UIKit, CI/CD</div>
               <a className="inline-block mt-4 text-sm text-orange-500" href="https://apps.apple.com/sample/heineken">View on App Store</a>
             </div>
             <div className="p-5 border rounded-lg bg-gray-50 dark:bg-gray-800">
               <h4 className="font-semibold">Qatar National</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">SwiftUI with VIPER for government portal</p>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Developed SwiftUI features for Retirement module, implemented maps and dynamic rendering with SiteCore.</p>
-              <div className="mt-3 text-sm text-gray-500">Technologies: SwiftUI, VIPER, Maps, SiteCore</div>
+              <div className="mt-3 text-sm text-gray-600">Technologies: SwiftUI, VIPER, Maps, SiteCore</div>
               <a className="inline-block mt-4 text-sm text-orange-500" href="https://apps.apple.com/sample/qatar">View on App Store</a>
             </div>
             <div className="p-5 border rounded-lg bg-gray-50 dark:bg-gray-800">
               <h4 className="font-semibold">Pedro</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">E-commerce fashion app</p>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Built and maintained iOS app for men’s & women’s fashion with Magento backend and integrated payments.</p>
-              <div className="mt-3 text-sm text-gray-500">Technologies: Swift, Objective-C, Magento API</div>
+              <div className="mt-3 text-sm text-gray-600">Technologies: Swift, Objective-C, Magento API</div>
               <a className="inline-block mt-4 text-sm text-orange-500" href="https://apps.apple.com/sample/pedro">View on App Store</a>
             </div>
             <div className="p-5 border rounded-lg bg-gray-50 dark:bg-gray-800">
               <h4 className="font-semibold">MyBrand Partner & MyBrand</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">Dual apps for street vendors & customers</p>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Developed vendor and customer apps enabling order placement, food delivery, and real-time tracking.</p>
-              <div className="mt-3 text-sm text-gray-500">Technologies: Swift, Firebase, Maps, CoreLocation</div>
+              <div className="mt-3 text-sm text-gray-600">Technologies: Swift, Firebase, Maps, CoreLocation</div>
               <a className="inline-block mt-4 text-sm text-orange-500" href="https://apps.apple.com/sample/mybrand">View on App Store</a>
             </div>
             <div className="p-5 border rounded-lg bg-gray-50 dark:bg-gray-800">
@@ -248,7 +267,7 @@ export default function Home() {
               <p className="text-sm text-gray-600 dark:text-gray-300">iPad apps for government inspections & enforcement</p>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Built feature-rich iPad apps to manage inspection routing, checklists, digital signatures and printing — enabling field workers to complete inspections efficiently.
               </p>
-              <div className="mt-3 text-sm text-gray-500">Technologies: Swift / Objective-C, CoreData, Maps, C# API</div>
+              <div className="mt-3 text-sm text-gray-600">Technologies: Swift / Objective-C, CoreData, Maps, C# API</div>
               <a className="inline-block mt-4 text-sm text-orange-500" href="https://apps.apple.com/us/app/ig-enforce/id571440611">View on App Store</a>
             </div>
 
@@ -256,7 +275,7 @@ export default function Home() {
               <h4 className="font-semibold">Charles & Keith</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">E-commerce app for women’s fashion (Singapore)</p>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Led development and integrations with Salesforce backend, payment gateways, and ensured high performance & image caching for smooth UX.</p>
-              <div className="mt-3 text-sm text-gray-500">Technologies: Swift, UIKit, Salesforce API, MVVM</div>
+              <div className="mt-3 text-sm text-gray-600">Technologies: Swift, UIKit, Salesforce API, MVVM</div>
               <a className="inline-block mt-4 text-sm text-orange-500" href="https://apps.apple.com/in/app/charles-keith/id359085099">View on App Store</a>
             </div>
 
@@ -264,14 +283,14 @@ export default function Home() {
               <h4 className="font-semibold">Group Buy (Client: Indonesia)</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">Multi-vendor commerce with social buying features</p>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Built the core app with MVVM, payment integrations and push notifications to handle group-based discounts and vendor interactions.</p>
-              <div className="mt-3 text-sm text-gray-500">Technologies: Swift, UIKit, Laravel API, Midtrans</div>
+              <div className="mt-3 text-sm text-gray-600">Technologies: Swift, UIKit, Laravel API, Midtrans</div>
             </div>
 
             <div className="p-5 border rounded-lg bg-gray-50 dark:bg-gray-800">
               <h4 className="font-semibold">ChatGram</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">Enterprise messaging & payments</p>
               <p className="mt-3 text-gray-700 dark:text-gray-300">Built chat, payments, file transfer and bot integration for enterprise customers to manage messaging workflows.</p>
-              <div className="mt-3 text-sm text-gray-500">Technologies: Swift, DialogFlow, Firebase, APNS</div>
+              <div className="mt-3 text-sm text-gray-600">Technologies: Swift, DialogFlow, Firebase, APNS</div>
               <a className="inline-block mt-4 text-sm text-orange-500" href="https://apps.apple.com/us/app/chatgram/id1436568489">View on App Store</a>
             </div>
 
@@ -308,17 +327,17 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-4">
             <div className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
-              <p className="text-sm text-gray-500">Email</p>
+              <p className="text-sm text-gray-600">Email</p>
               <a className="block mt-1 text-sm font-medium" href={`mailto:${EMAIL}`}>{EMAIL}</a>
             </div>
 
             <div className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
-              <p className="text-sm text-gray-500">Phone</p>
+              <p className="text-sm text-gray-600">Phone</p>
               <a className="block mt-1 text-sm font-medium" href={`tel:${PHONE}`}>{PHONE}</a>
             </div>
 
             <div className="p-4 rounded-lg bg-white dark:bg-gray-900 border">
-              <p className="text-sm text-gray-500">Social</p>
+              <p className="text-sm text-gray-600">Social</p>
               <div className="mt-1 flex flex-col text-sm">
                 <a className="hover:underline" href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn</a>
                 <a className="hover:underline" href={STACKOVERFLOW} target="_blank" rel="noreferrer">StackOverflow</a>
@@ -328,7 +347,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="py-6 text-center text-sm text-gray-500">
+        <footer className="py-6 text-center text-sm text-gray-600">
           <div>© {new Date().getFullYear()} Rahul Tak. All Rights Reserved. Built with ❤️ and Swift.</div>
         </footer>
       </div>
