@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </h3>
 
             {/* Subtitle */}
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                 {project.subtitle}
             </p>
 
@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     {project.role}
                 </p>
 
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
                     {project.company}
                     {project.location && ` • ${project.location}`}
                 </p>
