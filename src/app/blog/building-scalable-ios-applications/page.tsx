@@ -1060,7 +1060,7 @@ XCTAssertTrue(result)`}</CodeBlock>
               <Paragraph>
                 My experience includes Swift, SwiftUI, UIKit, Objective-C,
                 MVVM, VIPER, Clean Architecture, Swift Concurrency and
-                enterprise mobile application development. He has also led iOS
+                enterprise mobile application development. I also led iOS
                 teams and worked on large-scale applications where
                 architecture, maintainability and technical leadership are as
                 important as writing the code itself.
