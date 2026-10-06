@@ -42,18 +42,37 @@ export default function Home() {
               <summary className="list-none cursor-pointer text-sm hover:underline">
                 Blog ▾
               </summary>
-              <div className="absolute right-0 mt-2 w-80 rounded-lg border bg-white p-2 shadow-lg dark:border-gray-700 dark:bg-gray-800 z-50">
+
+              <div className="absolute right-0 z-50 mt-2 w-80 rounded-lg border bg-white p-2 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+
+                {/* Article 1 */}
                 <a
                   href="/blog/building-scalable-ios-applications"
-                  className="block rounded-md px-3 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700"
+                  className="block rounded-md px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
-                  <span className="block font-medium text-gray-900 dark:text-white">
+                  <span className="block text-sm font-medium text-gray-900 dark:text-white">
                     Building Scalable iOS Applications
                   </span>
+
                   <span className="mt-1 block text-xs text-gray-600 dark:text-gray-300">
                     Architecture decisions that matter in real-world projects
                   </span>
                 </a>
+                <div className="my-1 border-t border-gray-200 dark:border-gray-700" />
+                {/* Article 2 */}
+                <a
+                  href="/blog/practical-ios-performance-optimization"
+                  className="block rounded-md px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  <span className="block text-sm font-medium text-gray-900 dark:text-white">
+                    Practical iOS Performance Optimization
+                  </span>
+
+                  <span className="mt-1 block text-xs text-gray-600 dark:text-gray-300">
+                    What I check before reaching for Instruments
+                  </span>
+                </a>
+
               </div>
             </details>
             <a className="text-sm hover:underline" href="#projects">Projects</a>
