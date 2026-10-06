@@ -5,7 +5,7 @@ import ProjectSection from "@/components/projects/ProjectSection";
 import ExperienceSection from "@/components/experience/ExperienceSection";
 import SkillsSection from "@/components/skills/SkillsSection";
 
-const DOWNLOAD_RESUME_URL = '/Rahul-Tak-Resume.pdf'; // put resume in public/ or change to external link
+const DOWNLOAD_RESUME_URL = '/Rahul_Tak_Senior_iOS_Engineer_Resume.pdf'; // put resume in public/ or change to external link
 const EMAIL = 'rahultak2008@gmail.com';
 const PHONE = '+91-9509424233';
 const LINKEDIN = 'https://www.linkedin.com/in/takrahul/';
